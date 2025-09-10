@@ -1,0 +1,58 @@
+def  quiz_game():
+    questions=[
+        {
+            "question":"What is the capital of China?",
+            "options":["A. Tokyo","B. Seoul","C. Beijing","D. Moscow"],
+            "answer":"C"
+        },
+        {
+            "question":"Which is th ehighest peak in the world?",
+            "options":["A. Mt.Fiji", "B. Mt.Everest", "C. Kangchenjunga", "D. Dhaulagiri I"],
+            "answer":"B"
+        },
+        {
+            "question":"What is the 3rd letter in Greek alphabet?",
+            "options":["A. Beta","B. Theta","C.Lamda","D. Gamma"],
+            "answer":"D"
+        },
+        {
+            "question":"How many dots appear on a pair of dice?",
+            "options":["A. 42","B. 46","C. 40","D. 44"],
+            "answer":"A"
+        },
+        {
+            "question":"Which language is used to develop Android app?",
+            "options":["A. Python","B. Perl","C. Java","D. Perl"],
+            "answer":"C"
+        },
+        {
+            "question":"What is the name of art of Handwriting?", "options":["A. Calliography", "B. Photography","C. Videography", "D. Art"],
+            "answer":"A"
+        }
+        ]
+    score = 0
+    print("\n Welcome to the Quiz Game\n")
+    for i,q in enumerate(questions):
+        print(f"Q{i+1}:{q['question']}")
+        for option in q['options']:
+            print(option)
+        answer = input("Enter your answer (A/B/C/D): ").upper()
+        if answer == q["answer"]:
+            print("✅Correct!\n")
+            score+=1
+        else:
+            print(f"❌Wrong! The correct answer was {q['answer']}.\n")
+    print(f"Quiz Over! Your score: {score}/{len(questions)}")
+    if score == len(questions):
+        print("very good!,Genius")
+    elif score >=4:
+        print("good!, Intelligent")
+    elif score >=2:
+        print("Not bad!, Put little more efforts📖")
+    else:
+        print("Work Hard!, Better luck next time😥")
+quiz_game()
+
+
+
+
